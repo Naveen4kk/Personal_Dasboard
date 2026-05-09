@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ site.data.resume.name }} | Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+<body>
+    <header>
+        <h1>{{ site.data.resume.name }}</h1>
+        <p><strong>{{ site.data.resume.title }}</strong></p>
+        <p>{{ site.data.resume.contact.location }} | {{ site.data.resume.contact.email }}</p>
+    </header>
+
+    <section>
+        <h2>Impact & Achievements</h2>
+        <ul>
+            {% for item in site.data.resume.impact %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section>
+        <h2>Technical Expertise</h2>
+        <p><strong>Cloud:</strong> {{ site.data.resume.skills.cloud | join: ", " }}</p>
+        <p><strong>DevOps:</strong> {{ site.data.resume.skills.devops | join: ", " }}</p>
+        <p><strong>Automation:</strong> {{ site.data.resume.skills.automation | join: ", " }}</p>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        {% for job in site.data.resume.experience %}
+        <div>
+            <h3>{{ job.company }} — <em>{{ job.role }}</em></h3>
+            <p><small>{{ job.period }}</small></p>
+            <p>{{ job.details }}</p>
+        </div>
+        {% endfor %}
+    </section>
+</body>
+</html>
