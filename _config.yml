@@ -1,0 +1,6 @@
+[cite_start]title: Naveen Indla Portfolio [cite: 18, 45]
+[cite_start]description: DevOps Engineer & Platform Engineer [cite: 19, 46]
+theme: jekyll-theme-minimal
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
